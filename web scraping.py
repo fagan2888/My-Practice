@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 12 13:17:52 2018
 
-@author: Olivia XU
-"""
+
+##############################################
+########### Web Scraping Practice ############
+##############################################
+
 
 from bs4 import BeautifulSoup as soup
 from urllib.parse import urljoin
@@ -60,11 +60,14 @@ while len(urls)>0 and len(opened)<maxNumUrl:
 
 print('The number of urls seen is {}'.format(len(seen)))
 print('The number of urls opened is {}'.format(len(opened)))
+
 url_copy = urls
 score_list = {}
+
 for i in range(25):
     max_score = max(url_copy, key = url_copy.get)
     score_list[max_score] = url_copy[max_score]
     del url_copy[max_score]
+
 for key, value in score_list.items():
     print(key, value)
