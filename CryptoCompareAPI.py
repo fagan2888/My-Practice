@@ -1,5 +1,10 @@
+
+#####################################################
+##### This is the API for www.cryptocompare.com #####
+#####################################################
+
+
 import pandas as pd
-import numpy as np
 import requests
 from datetime import datetime
 
@@ -80,11 +85,4 @@ class CryptoCompareAPI():
             '24HVol':vol_from_24h, '24HBaseVol':vol_to_24h
         })
         return df
-
-if __name__ == '__main__':
-    api = CryptoCompareAPI()
-    param = {'fsym':'USDT', 'tsym':'USD', 'limit':168}
-    df = api.getCandle('h', param)
-    print(df)
-
     
