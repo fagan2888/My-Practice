@@ -1,2 +1,2 @@
 # Practice-for-Fun
-I choose come topics that I'm interested in to do hands-on practice.
+* Topics that I'm interested in for hands-on practice.
